@@ -1,0 +1,36 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ubiratans.android.popmoviesapp.MoviesListFragment">
+
+    <TextView android:id="@+id/text_view_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/most_popular"
+        android:textStyle="normal|bold"
+        android:textColor="@android:color/background_light"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="6dp"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout_swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/text_view_list_title">
+
+        <GridView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnWidth="150dp"
+            android:stretchMode="columnWidth"
+            android:numColumns="auto_fit"
+            android:verticalSpacing="4dp"
+            android:horizontalSpacing="4dp"
+            android:id="@+id/grid_view_movies_list">
+        </GridView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
